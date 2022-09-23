@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,8 +13,43 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  
+    
+  
+  <ion-grid>
+    <ion-row style="background-color: black">
+      
+       <ion-col  (click)="detalhes (0)" size="12"  >
+         
+        <ion-img src="https://image.api.playstation.com/cdn/UP1018/CUSA01764_00/daExAVIqaWz8NNeqTaFW2IcweYzqt4d8.png">Batman</ion-img>
+       </ion-col>
+    </ion-row>
+   
+    <ion-row style="background-color: black" >
+       <ion-col (click)="detalhes (1)"size="6" size-md="4">
+
+        <ion-img src="https://br.web.img2.acsta.net/medias/nmedia/18/91/98/15/20172684.jpg">Indiana Jones</ion-img>
+       </ion-col>
+       
+      <ion-col (click)="detalhes (2)"size="6"  size-md="4" >
+        <ion-img src="https://images.justwatch.com/poster/268682314/s592/jack-reacher-o-ultimo-tiro">jack-reacher-o-ultimo-tiro</ion-img>
+      </ion-col>
+       
+      <ion-col (click)="detalhes (3)"size="6" size-md="4">
+        <ion-img src="https://images.justwatch.com/poster/268682314/s592/jack-reacher-o-ultimo-tiro">jack-reacher-o-ultimo-tiro</ion-img>
+      </ion-col>
+    
+      <ion-col (click)="detalhes (4)"size="6"  size-md="4">
+        <ion-img src="https://images.justwatch.com/poster/268682314/s592/jack-reacher-o-ultimo-tiro">jack-reacher-o-ultimo-tiro</ion-img>
+      </ion-col>
+      
+      <ion-col (click)="detalhes (4)" size="6" size-md="4">
+        <ion-img src="https://images.justwatch.com/poster/268682314/s592/jack-reacher-o-ultimo-tiro">
+          jack-reacher-o-ultimo-tiro</ion-img>
+      </ion-col>
+     
+    </ion-row>
+  
+  </ion-grid>
+
 </ion-content>
