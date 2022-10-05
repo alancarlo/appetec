@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { AlertController, LoadingController, ToastController } from '@ionic/angular';
+import { FilmesService } from '../services/filmes.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +10,19 @@ import { AlertController } from '@ionic/angular';
 })
 export class HomePage {
 
-  constructor(private alertController: AlertController) {}
+  constructor(private alertController: AlertController,
+    public toastControler: ToastController,
+    private loadingCtrl: LoadingController,
+    private filmeService: FilmesService,
+    private rota: Router) { }
+  
+  async ngOnInit() {
+  //console.log('passou no home');
+  //this.carregarFilmes();  
+
+    this.filmeService.getProductions();
+  }
+
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Alert',
